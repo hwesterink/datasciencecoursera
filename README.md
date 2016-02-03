@@ -1,2 +1,2 @@
 # datasciencecoursera
-Repository for the products made during the Data Science Specialization on Coursera
+Repository for the R code made during the Data Science Specialization of Johns Hopkins University on Coursera
