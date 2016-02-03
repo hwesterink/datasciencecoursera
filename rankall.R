@@ -39,10 +39,13 @@ rankall <- function(outcome, num = "best")  {
     for(i in 1:num_states)  {
         hospital <- ranked_hospital(outcome_data, state.abb[i], outcome, num)
         if(i == 1) {
-            hospitals <- data.frame(hospital, state.abb[i])
-            } else {
-            new_line <- data.frame(hospital, state.abb[i])
-            print(new_line)
+            hospitals <- data.frame(hospital = hospital, state = state.abb[i])
+            out <- paste ("==> Hospital in state", i, "selected")
+            print(out)
+        } else {
+            new_line <- data.frame(hospital = hospital, state = state.abb[i])
+            out <- paste ("==> Hospital in state", i, "selected")
+            print(out)
             hospitals <- rbind.data.frame(hospitals, new_line)
         }
     }
