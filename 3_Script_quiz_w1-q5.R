@@ -3,7 +3,7 @@
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
 download.file(fileUrl, destfile="R Scripts/Data/2006_Idoha.csv")
 dataDownload <- date()
-## Install XML-package
+## Install data.table-package
 install.packages("data.table")
 library(data.table)
 ## Loading data into R
