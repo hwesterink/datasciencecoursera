@@ -2,7 +2,7 @@
 ## Download date = 24-3-2016
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
 download.file(fileUrl, destfile="R Scripts/Data/Balt_rest.xml")
-dataDownload <- date()
+dateDownload <- date()
 ## Install XML-package
 install.packages("XML")
 library(XML)

@@ -7,13 +7,6 @@ dateDownload <- date()
 data <- read.csv("R Scripts/Data/2006survey.csv")
 head(data)
 ## Data analysis
-count <- 0
-rows <- nrow(data)
-for(i in 1:rows)  {
-   if(!is.na(data[i, "VAL"]))  {
-       if(data[i, "VAL"] == 24)  {
-           count <- count + 1
-       }  
-   }
-}
-print(count)
+library(dplyr)
+data <- mutate(data, agricultureLogical=(ACR=="3" & AGS=="6"))
+data[which(data$agricultureLogical),]
